@@ -10,12 +10,12 @@
 **Builds virtual machines without the two things that go wrong: an image that is not what it claims, and a specification that leaves the host unusable**
 
 ![Status](https://img.shields.io/badge/status-active-2EA043?style=for-the-badge)
-![Version](https://img.shields.io/badge/version-1.3.2-1F6FEB?style=for-the-badge)
+[![Release](https://img.shields.io/github/v/release/RafaDevpt/virtual-lab-builder?style=for-the-badge&color=1F6FEB)](https://github.com/RafaDevpt/virtual-lab-builder/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/RafaDevpt/virtual-lab-builder/ci.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/RafaDevpt/virtual-lab-builder/actions/workflows/ci.yml)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
 ![bash](https://img.shields.io/badge/bash-3.2+-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
-![Tests](https://img.shields.io/badge/351_tests-2EA043?style=for-the-badge)
 
-<a href="../../tree/main"><img src="https://img.shields.io/badge/←_back_to_index-30363D?style=flat-square" /></a>
+<a href="https://github.com/RafaDevpt/Personal-AI-Projects"><img src="https://img.shields.io/badge/←_back_to_index-30363D?style=flat-square" /></a>
 
 </div>
 
