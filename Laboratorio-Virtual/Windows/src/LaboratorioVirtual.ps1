@@ -78,7 +78,7 @@ $script:Raiz = Split-Path -Parent $MyInvocation.MyCommand.Path
 . (Join-Path $script:Raiz 'Instalacao.ps1')
 . (Join-Path $script:Raiz 'Contentores.ps1')
 
-$script:Versao = '1.3.2'
+$script:Versao = '1.4.0'
 $script:Credito = 'Created by Redfox using Claude'
 $script:CaminhoCatalogo = Join-Path $script:Raiz 'catalogo.json'
 $script:CaminhoCatalogoServicos = Join-Path $script:Raiz 'catalogo-servicos.json'

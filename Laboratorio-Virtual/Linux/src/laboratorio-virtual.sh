@@ -27,7 +27,7 @@ set -euo pipefail
 
 RAIZ="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly RAIZ
-readonly VERSAO='1.3.2'
+readonly VERSAO='1.4.0'
 readonly CREDITO='Created by Redfox using Claude'
 readonly CATALOGO="${RAIZ}/catalogo.json"
 readonly CATALOGO_SERVICOS="${RAIZ}/catalogo-servicos.json"

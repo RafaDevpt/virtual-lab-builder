@@ -34,9 +34,9 @@ name: CI
 
 on:
   push:
-    branches: [Virtual-Lab-Builder]
+    branches: [main]
   pull_request:
-    branches: [Virtual-Lab-Builder]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
