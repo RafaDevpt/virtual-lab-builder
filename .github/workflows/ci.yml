@@ -48,7 +48,7 @@ jobs:
         working-directory: Laboratorio-Virtual/Windows
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Sintaxe (parser do PowerShell)
         shell: pwsh
@@ -112,7 +112,7 @@ jobs:
         working-directory: Laboratorio-Virtual/Linux
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Dependências
         run: sudo apt-get update && sudo apt-get install -y jq shellcheck
@@ -164,7 +164,7 @@ jobs:
         working-directory: Laboratorio-Virtual/macOS
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Dependências
         run: brew install jq shellcheck
@@ -229,7 +229,7 @@ jobs:
     name: O catálogo é igual nas três
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # PT-PT: E o unico ficheiro que tem de coincidir byte a byte. Uma imagem
       #        que exista numa versao e nao noutra e uma armadilha para quem
