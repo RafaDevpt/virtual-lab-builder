@@ -572,11 +572,11 @@ function ConvertTo-CaminhoParaGpg {
                O `gpg` que vem com o Git para Windows e uma compilação MSYS. Um
                programa MSYS não reconhece `C:\Users\...` como um caminho
                absoluto -- a barra invertida e um caracter válido num nome de
-               ficheiro POSIX, por isso `C:\Users\rafae\...` e, para ele, **um
+               ficheiro POSIX, por isso `C:\Users\utilizador\...` e, para ele, **um
                único nome relativo**. E resolve-o contra a pasta actual:
 
                    gpg: keyblock resource
-                   '/d/GitHub/.../Windows/C:\Users\rafae\AppData\...'
+                   '/d/GitHub/.../Windows/C:\Users\utilizador\AppData\...'
                    No such file or directory
 
                Barras normais também não chegam: testado, da o mesmo erro com
@@ -594,7 +594,7 @@ function ConvertTo-CaminhoParaGpg {
                The `gpg` shipped with Git for Windows is an MSYS build. An MSYS
                program does not recognise `C:\Users\...` as absolute -- the
                backslash is a valid character in a POSIX filename, so
-               `C:\Users\rafae\...` is, to it, **one relative name** -- and it
+               `C:\Users\utilizador\...` is, to it, **one relative name** -- and it
                resolves it against the current directory.
 
                Forward slashes are not enough either: tested, `C:/Users/...`

@@ -107,13 +107,13 @@ registo introduzido na 1.3.1 deu a mensagem inteira — e a partir dela saíram
 ### 1 · O gpg do Git para Windows nunca recebeu um caminho que soubesse ler
 
 ```
-gpg: keyblock resource '/d/GitHub/.../Windows/C:\Users\rafae\AppData\Local\Temp\lv-gpg-.../pubring.kbx':
+gpg: keyblock resource '/d/GitHub/.../Windows/C:\Users\utilizador\AppData\Local\Temp\lv-gpg-.../pubring.kbx':
      No such file or directory
 ```
 
 O `gpg` que vem com o Git para Windows é uma compilação **MSYS**. Um programa
 MSYS não reconhece `C:\Users\...` como caminho absoluto — a barra invertida é
-um caracter válido num nome de ficheiro POSIX, por isso `C:\Users\rafae\...`
+um caracter válido num nome de ficheiro POSIX, por isso `C:\Users\utilizador\...`
 é, para ele, **um único nome relativo** — e resolve-o contra a pasta actual.
 
 Barras normais também não chegam: testado, `C:/Users/...` dá o mesmo erro. A
