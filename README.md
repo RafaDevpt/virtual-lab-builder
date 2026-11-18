@@ -5,19 +5,29 @@
 
 <div align="center">
 
-# 🧪 Laboratório Virtual
+<img src="Assets/banner.svg" width="100%" alt="Virtual Lab Builder" />
 
-**Builds virtual machines without the two things that go wrong: an image that is not what it claims, and a specification that leaves the host unusable**
+<br />
 
-![Status](https://img.shields.io/badge/status-active-2EA043?style=for-the-badge)
-[![Release](https://img.shields.io/github/v/release/RafaDevpt/virtual-lab-builder?style=for-the-badge&color=1F6FEB)](https://github.com/RafaDevpt/virtual-lab-builder/releases)
-[![CI](https://img.shields.io/github/actions/workflow/status/RafaDevpt/virtual-lab-builder/ci.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/RafaDevpt/virtual-lab-builder/actions/workflows/ci.yml)
-![PowerShell](https://img.shields.io/badge/PowerShell-5.1-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
-![bash](https://img.shields.io/badge/bash-3.2+-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+[![CI](https://img.shields.io/github/actions/workflow/status/RafaDevpt/virtual-lab-builder/ci.yml?branch=main&style=flat-square&label=CI&labelColor=0b1220)](https://github.com/RafaDevpt/virtual-lab-builder/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/RafaDevpt/virtual-lab-builder?style=flat-square&label=release&color=fb923c&labelColor=0b1220)](https://github.com/RafaDevpt/virtual-lab-builder/releases/latest)
+![status](https://img.shields.io/badge/status-active-fb923c?style=flat-square&labelColor=0b1220)
+![PowerShell](https://img.shields.io/badge/PowerShell-5.1-5391FE?style=flat-square&labelColor=0b1220&logo=powershell&logoColor=white)
+![bash](https://img.shields.io/badge/bash-3.2+-4EAA25?style=flat-square&labelColor=0b1220&logo=gnubash&logoColor=white)
+![licence](https://img.shields.io/badge/licence-MIT-f59e0b?style=flat-square&labelColor=0b1220)
 
-<a href="https://github.com/RafaDevpt/Personal-AI-Projects"><img src="https://img.shields.io/badge/←_back_to_index-30363D?style=flat-square" /></a>
+<br /><br />
+
+<a href="https://github.com/RafaDevpt/Personal-AI-Projects"><img src="https://img.shields.io/badge/←_back_to_the_index-30363d?style=for-the-badge" /></a>
+<a href="https://github.com/RafaDevpt/virtual-lab-builder/releases/latest"><img src="https://img.shields.io/badge/download_the_latest_release_→-fb923c?style=for-the-badge&labelColor=0b1220" /></a>
+
+<sub>Part of <a href="https://github.com/RafaDevpt/Personal-AI-Projects"><b>Personal AI Projects</b></a> by Redfox</sub>
 
 </div>
+
+# 🧪 Virtual Lab Builder
+
+> **Builds virtual machines without the two things that go wrong: an image that is not what it claims, and a specification that leaves the host unusable**
 
 ---
 
@@ -65,7 +75,7 @@ Saying "verified" when only a same-channel checksum was compared is a misleading
 
 ---
 
-## It recognises the hypervisor you already paid for
+## It recognises the hypervisor already paid for
 
 Before proposing to install anything, it looks at what is already there — and it knows how to drive each one.
 
@@ -77,7 +87,7 @@ Before proposing to install anything, it looks at what is already there — and 
 
 Somebody with a company-paid VMware, machines already inside it, does not need a second hypervisor — and should not have one. The two fight over the processor's virtualisation extensions and both end up slow.
 
-**Offering "would you like to use the one you have?" and then not knowing how to use it would be a pretend question.** So the work was not detection: it was learning to drive each of them. And they are driven in ways that share nothing — Parallels has `prlctl`, a real command-line tool; VMware has no equivalent, only a text file, the `.vmx`, that describes the whole machine and is written by hand. There is no abstraction to share between the two, and inventing one would make both worse.
+**Offering to use the hypervisor already installed, and then not knowing how to drive it, would be a pretend question.** So the work was not detection: it was learning to drive each of them. And they are driven in ways that share nothing — Parallels has `prlctl`, a real command-line tool; VMware has no equivalent, only a text file, the `.vmx`, that describes the whole machine and is written by hand. There is no abstraction to share between the two, and inventing one would make both worse.
 
 ---
 
@@ -121,9 +131,9 @@ The specification is worked out from the host, and the program explains the arit
 
 ---
 
-## Bring your own image
+## Bringing an existing image
 
-For a Proxmox, a TrueNAS, an appliance, or the ISO your company hands you. `.iso`, `.img`, `.raw`, `.qcow2`, `.vdi`, `.vmdk`, `.vhd`, `.vhdx`, `.ova`, `.ovf`.
+For a Proxmox, a TrueNAS, an appliance, or the ISO a company hands out. `.iso`, `.img`, `.raw`, `.qcow2`, `.vdi`, `.vmdk`, `.vhd`, `.vhdx`, `.ova`, `.ovf`.
 
 **No guarantees are invented here.** The report shows four layers unapplied and, at best, the checksum.
 
@@ -185,7 +195,7 @@ Passwords are generated at the moment of use and shown **once**. They are writte
 
 ## Installation
 
-Pick your system's folder. Each is a complete program.
+Each system has its own folder, and each is a complete program.
 
 | Folder | How to open | Hypervisors |
 | :--- | :--- | :--- |
@@ -211,7 +221,7 @@ Full documentation in [`Laboratorio-Virtual/README.md`](Laboratorio-Virtual/READ
 
 ## Known limits
 
-- **Creation in VMware and Parallels has not been exercised against the real products.** The `.vmx` is verified field by field and the `prlctl` calls follow the documentation, but neither the author's machine nor the CI runners have a licence for either. The first machine you build in one of them is the first real test
+- **Creation in VMware and Parallels has not been exercised against the real products.** The `.vmx` is verified field by field and the `prlctl` calls follow the documentation, but neither the author's machine nor the CI runners have a licence for either. The first machine built in one of them is the first real test
 - **Windows and macOS images are not downloaded automatically**, and that is deliberate — see above
 - **Four catalogue entries do not verify today**, found by sweeping every image against the real servers in 1.3.2: Fedora's manifest is a 404 (the entry points at release 41), Rocky's signature does not match the key given, openSUSE's key URL points at a signature file, and Kali redirects to a domain that is deliberately not on the allowlist. None is a code fault — the program refuses, which is what it should do
 - **The catalogue ages.** Six of the seventeen images carry a pinned GPG fingerprint; the rest rely on the checksum and the official server's HTTPS certificate, because their projects publish nothing stronger
@@ -220,7 +230,7 @@ Full documentation in [`Laboratorio-Virtual/README.md`](Laboratorio-Virtual/READ
 
 ---
 
-## License
+## Licence
 
 MIT — see [`LICENSE`](LICENSE).
 
